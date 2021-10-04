@@ -1,0 +1,81 @@
+
+.title {
+	text-align: center;
+	margin-bottom: 10%;
+}
+
+.faq p {
+	font-size: 40px;
+	color: #17359F;
+	margin-bottom: 0;
+}
+.how p{
+	font-size: 18px;
+	margin-top: 0;
+}
+
+.question {
+	margin: 8%;
+}
+
+
+/* Question */
+.cp_qa .cp_tab {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	color: #1b2538;
+}
+.cp_qa .cp_tab input {
+	position: absolute;
+	opacity: 0;
+}
+.cp_qa .cp_tab label {
+	font-weight: bold;
+	line-height: 1.6;
+	position: relative;
+	display: block;
+	padding: 1em 2em 1em 1em;
+}
+.cp_qa .cp_tab label:hover {
+	color: #1B7BB0;
+}
+/* answer */
+.cp_qa .cp_tab .cp_tab-content {
+	overflow: hidden;
+	max-height: 0;
+	transition:0.8s ;
+	color: #ffffff;
+	background: #1B7BB0;
+}
+.cp_qa .cp_tab .cp_tab-content p {
+	margin: 1em;
+	text-align: center;
+}
+
+/* --icon */
+.cp_qa .cp_tab input:checked ~ label {
+	color: #1B7BB0;
+}
+
+.cp_qa .cp_tab input:checked ~ .cp_tab-content {
+	max-height: 40em;
+}
+
+.cp_qa .cp_tab label::after {
+	line-height: 1.6;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	display: block;
+	width: 3em;
+	margin-top: -12.5px;
+	transition: 0.8s;
+}
+.cp_qa .cp_tab input[type=checkbox] + label::after {
+	content: '▼';
+}
+.cp_qa .cp_tab input[type=checkbox]:checked + label::after {
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
